@@ -1,0 +1,12 @@
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Engine.dll
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\ship.png
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.exe
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.pdb
+C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.exe
+C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.pdb
+C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTop.png
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTopLeft.png
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTopRight.png
+C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Background\FondoEspacial.png
