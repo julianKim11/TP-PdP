@@ -1,5 +1,4 @@
 C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Engine.dll
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\ship.png
 C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.exe
 C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.pdb
 C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache

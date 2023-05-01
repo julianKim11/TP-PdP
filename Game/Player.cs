@@ -9,24 +9,18 @@ namespace Game
     public class Player
     {
         private string image;
-        private float posX, posY;
         private float movementSpeed;
-        private float scaleX, scaleY;
-        private float angle;
-        private float pivotX, pivotY;
+        private Vector2 offset;
+        private Transform transform;
 
-        public Player(string image, float posX, float posY, float scaleX, float scaleY, float angle, float pivotX, float pivotY)
+
+        public Player(string image, Vector2 position, Vector2 scale, float angle, Vector2 imageSize)
         {
             this.image = image;
-            this.posX = posX;
-            this.posY = posY;
-            this.scaleX = scaleX;
-            this.scaleY = scaleY;
-            this.angle = angle;
-            this.pivotX = pivotX;
-            this.pivotY = pivotY;
+            transform = new Transform(position, scale, angle);
+            this.offset = new Vector2 ( scale.X * imageSize.X, scale.Y * imageSize.Y );
 
-            movementSpeed = 150f;
+            movementSpeed = 200f;
         }
         public void Update()
         {
@@ -34,14 +28,15 @@ namespace Game
         }
         public void Render()
         {
-            Engine.Draw("Textures/Player/NaveTop.png", posX, posY, scaleX, scaleY, angle, pivotX, pivotY);
+            Engine.Draw("Textures/Player/NaveTop.png", transform.Position.X, transform.Position.Y, 
+                        transform.Scale.X, transform.Scale.Y, transform.Angle, offset.X, offset.Y);
         }
         private void InputReading()
         {
-            if (Engine.GetKey(Keys.W)) posY -= movementSpeed * Program.deltaTime;
-            if (Engine.GetKey(Keys.S)) posY += movementSpeed * Program.deltaTime;
-            if (Engine.GetKey(Keys.D)) posX += movementSpeed * Program.deltaTime;
-            if (Engine.GetKey(Keys.A)) posX -= movementSpeed * Program.deltaTime;
+            if (Engine.GetKey(Keys.W)) transform.Translate(Vector2.VectorUp, movementSpeed);
+            if (Engine.GetKey(Keys.S)) transform.Translate(Vector2.VectorDown, movementSpeed);
+            if (Engine.GetKey(Keys.D)) transform.Translate(Vector2.VectorRight, movementSpeed);
+            if (Engine.GetKey(Keys.A)) transform.Translate(Vector2.VectorLeft, movementSpeed);
         }
     }
 }
