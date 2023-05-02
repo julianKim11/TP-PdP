@@ -5,14 +5,8 @@ namespace Game
 {
     public class Program
     {
-        private static Time _time;
-
-        private static Character _player;
-        public static Character Player { get { return _player; } }
-        private static List<Enemy> enemies = new List<Enemy>();
         private const int width = 1280;
         private const int height = 720;
-
 
         static void Main(string[] args)
         {

@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    class Enemy
+    public class Limit
     {
         private Transform _transform;
         private Renderer _renderer;
         private Vector2 _direction;
-        private Animation asteroid;
+        private Animation laser;
         private Animation currentAnimation;
         private Character _player;
 
         private float _movementSpeed;
 
-        public Enemy(string texturePath, Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction)
+        public Limit(string texturePath, Vector2 position, Vector2 scale, float angle)
         {
             _player = LevelController.Player;
             _transform = new Transform(position, scale, angle);
 
-            _movementSpeed = movementSpeed;
-            _direction = direction;
-
             CreateAnimation1();
-            currentAnimation = asteroid;
+            currentAnimation = laser;
             _renderer = new Renderer(currentAnimation, scale);
         }
         public void CheckCollision()
@@ -50,10 +47,10 @@ namespace Game
 
             for (int i = 0; i < 4; i++)
             {
-                Texture frame = Engine.GetTexture($"Textures/Asteroid/Asteroid{i}.png");
+                Texture frame = Engine.GetTexture($"Textures/Laser/Horizontal/VallaLaser{i}.png");
                 idleTextures1.Add(frame);
             }
-            asteroid = new Animation(true, "asteroid", 0.15f, idleTextures1);
+            laser = new Animation(true, "laser", 0.15f, idleTextures1);
         }
 
         public void Initialize() { }
@@ -62,11 +59,8 @@ namespace Game
         {
             CheckCollision();
             currentAnimation.Update();
-            _transform.Translate(_direction, _movementSpeed);
         }
 
         public void Render() => _renderer.Render(_transform);
-
-        //public override string ToString() => $"Speed: {_movementSpeed}";
     }
 }

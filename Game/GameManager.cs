@@ -15,11 +15,13 @@ namespace Game
     }
     public class GameManager
     {
-        private static GameManager instance;
-        public const string GAMEOVER_PATH = "Textures/Background/GameOverFondoEspacial.png";
-        public const string MAINMENU_PATH = "Textures/Background/GameOverFondoEspacial.png";
-        public const string WIN_PATH = "Textures/Background/GameOverFondoEspacial.png";
+        public StaticScreen GameOverScreen = new StaticScreen("Textures/Background/GameOverFondoEspacial.png");
+        public StaticScreen MainMenuScreen = new StaticScreen("Textures/Background/MainMenuFondoEspacial.png");
+        public StaticScreen WinScreen = new StaticScreen("Textures/Background/WinScreenFondoEspacial.png");
+        public LevelController LevelController { get; private set; }
         
+        private static GameManager instance;
+
         public static GameManager Instance
         {
             get
@@ -32,33 +34,54 @@ namespace Game
             }
         }
         public GameState CurrentState { get; private set; }
+        public bool running = false;
         public void Start()
         {
+            LevelController = new LevelController();
+            LevelController.Start();
             ChangeGameState(GameState.MainMenu);
         }
         public void Update()
         {
+            LevelController.Update();
+
             if (Engine.GetKey(Keys.SPACE))
             {
-                ChangeGameState(GameState.Level);
+                if (CurrentState == GameState.MainMenu)
+                {
+                    GameManager.Instance.ChangeGameState(GameState.Level);
+                    running = true;
+                }
+            }         
+            if (Engine.GetKey(Keys.ESCAPE))
+            {
+                if (CurrentState == GameState.GameOverScreen)
+                {
+                    GameManager.Instance.ChangeGameState(GameState.MainMenu);
+                }
+                if (CurrentState == GameState.WinScreen)
+                {
+                    GameManager.Instance.ChangeGameState(GameState.MainMenu);
+                }
             }
-        }
+        } 
         public void Render()
         {
             Engine.Clear(); 
+
             switch (CurrentState)
             {
                 case GameState.MainMenu:
-                    Engine.Draw(MAINMENU_PATH,0,0);
+                    MainMenuScreen.Render();
                     break;
                 case GameState.GameOverScreen:
-                    Engine.Draw(GAMEOVER_PATH, 0, 0);
+                    GameOverScreen.Render();
                     break;
                 case GameState.WinScreen:
-                    Engine.Draw(WIN_PATH, 0, 0);
+                    WinScreen.Render();
                     break;
                 case GameState.Level:
-                    Program.Render();
+                    LevelController.Render();
                     break;
             }
             Engine.Show();

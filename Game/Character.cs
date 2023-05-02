@@ -11,39 +11,50 @@ namespace Game
         private Transform _transform;
         private Renderer _renderer;
         private Vector2 _direction;
-
-        private float _movementSpeed;
-
         private Animation playerIdle;
         private Animation currentAnimation;
-        private string checkDirection = "UP";
+        private LifeController lifeController;
 
+        private float _movementSpeed;
+        private string checkDirection = "UP";
+        public bool isAlive = true;
+
+        public LifeController LifeController => lifeController;
         public Transform Transform { get { return _transform; } }
         public Renderer Renderer { get { return _renderer; } }
 
         bool active = true;
 
-        public Character(string texturePath, Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction)
+        public Character(string texturePath, Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction, int life)
         {
             _transform = new Transform(position, scale, angle);
+            lifeController = new LifeController(life);
+
+            CreateAnimation1();
+            currentAnimation = playerIdle;
 
             _movementSpeed = movementSpeed;
             _direction = direction;
 
-            CreateAnimation1();
-            currentAnimation = playerIdle;
             _renderer = new Renderer(currentAnimation, scale);
+        }
+        public bool Dead()
+        {
+            isAlive = false;
+            return isAlive;
         }
         private void IncreaseSpeed()
         {
             if (active)
             {
-                _movementSpeed += 1;
+                _movementSpeed += 0.2f;
             }
-            if(_movementSpeed >= 1501f)
+            if(_movementSpeed >= 641f)
             {
                 active = false;
                 _movementSpeed = 0f;
+                GameManager.Instance.ChangeGameState(GameState.WinScreen);
+                LevelController.Reset();
             }
         }
         public void CreateAnimation1()
@@ -60,13 +71,16 @@ namespace Game
 
         public void Initialize() { }
 
-        public void Update() 
+        public void Update()
         {
-            currentAnimation.Update();
-            InputReading();
             IncreaseSpeed();
-            _transform.Translate(_direction, _movementSpeed);
-            Engine.Debug(ToString());
+            InputReading();
+            currentAnimation.Update();
+            if (GameManager.Instance.running == true)
+            {
+                _transform.Translate(_direction, _movementSpeed);
+            }
+            
         }
 
         public void Render() => _renderer.Render(_transform);
@@ -101,6 +115,6 @@ namespace Game
                 }
             }
         }
-        public override string ToString() => $"Speed: {_movementSpeed}";
+        //public override string ToString() => $"Speed: {_movementSpeed}";
     }
 }
