@@ -22,17 +22,13 @@ namespace Game
             _scale = scale;
             _angle = angle;
         }
-
         public void SetPositon(Vector2 position) => _position = position;
-
-        public void Rotate(float direction) => _angle = direction ;
-
+        public void Rotate(float direction) => _angle = direction;
         public void Translate(Vector2 direction, float speed = 1)
         {
             _position.X += direction.X * speed * Time.DeltaTime;
             _position.Y += direction.Y * speed * Time.DeltaTime;
         }
-
         public override string ToString()
         {
             return $"Position - X : {_position.X} / Y : {_position.Y}\n" +

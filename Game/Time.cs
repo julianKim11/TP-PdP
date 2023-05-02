@@ -13,7 +13,6 @@ namespace Game
         public static float DeltaTime;
 
         public void Initialize() => _startTime = DateTime.Now;
-
         public void Update()
         {
             float currentTime = (float)(DateTime.Now - _startTime).TotalSeconds;

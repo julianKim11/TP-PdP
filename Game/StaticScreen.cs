@@ -14,10 +14,6 @@ namespace Game
         {
             _image = image;
         }
-        public void Update()
-        {
-
-        }
         public void Render()
         {
             Engine.Draw(_image, 0, 0);

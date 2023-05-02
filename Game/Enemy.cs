@@ -14,6 +14,7 @@ namespace Game
         private Animation asteroid;
         private Animation currentAnimation;
         private Character _player;
+        private CheckCollision _checkCollision;
 
         private float _movementSpeed;
 
@@ -28,21 +29,7 @@ namespace Game
             CreateAnimation1();
             currentAnimation = asteroid;
             _renderer = new Renderer(currentAnimation, scale);
-        }
-        public void CheckCollision()
-        {
-            float distanceX = Math.Abs(_player.Transform.Position.X) - _transform.Position.X;
-            float distanceY = Math.Abs(_player.Transform.Position.Y) - _transform.Position.Y;
-
-            float sumHalfWidths = _player.Renderer.Texture.Width / 2 + _renderer.Texture.Width / 2;
-            float sumHalfHeight = _player.Renderer.Texture.Height / 2 + _renderer.Texture.Height / 2;
-
-            //if(distanceX <= sumHalfWidths && distanceY <= sumHalfHeight)
-            if (Math.Abs(distanceX) <= sumHalfWidths && Math.Abs(distanceY) <= sumHalfHeight)
-            {
-                _player.LifeController.GetDamage(1);
-                //Engine.Debug("Colision");
-            }
+            _checkCollision = new CheckCollision();
         }
         public void CreateAnimation1()
         {
@@ -55,18 +42,12 @@ namespace Game
             }
             asteroid = new Animation(true, "asteroid", 0.15f, idleTextures1);
         }
-
-        public void Initialize() { }
-
         public void Update()
         {
-            CheckCollision();
+            _checkCollision.CheckCollisions(_player, _renderer, _transform);
             currentAnimation.Update();
             _transform.Translate(_direction, _movementSpeed);
         }
-
         public void Render() => _renderer.Render(_transform);
-
-        //public override string ToString() => $"Speed: {_movementSpeed}";
     }
 }

@@ -67,8 +67,7 @@ namespace Game
         } 
         public void Render()
         {
-            Engine.Clear(); 
-
+            Engine.Clear();
             switch (CurrentState)
             {
                 case GameState.MainMenu:
@@ -86,7 +85,6 @@ namespace Game
             }
             Engine.Show();
         }
-
         public void ChangeGameState(GameState newState)
         {
             CurrentState = newState;
