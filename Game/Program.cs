@@ -5,67 +5,41 @@ namespace Game
 {
     public class Program
     {
-        /*public class Enemy
-        {
-            private float damage;
+        private static Time _time;
 
-            public Enemy(float damage)
-            {
-                this.damage = damage;
-            }
-        }*/
+        private static Character _player;
+        public static Character Player { get { return _player; } }
+        private static List<Enemy> enemies = new List<Enemy>();
+        private const int width = 1280;
+        private const int height = 720;
 
-        private static DateTime startTime;
-        private static float lastFrame;
-        public static float deltaTime;
 
-        private static Player player = new Player("Textures/Player/NaveTop.png", 
-                                       new Vector2(200, 100), new Vector2(1f, 1f), 
-                                       90, new Vector2(32, 32));
-        //private static List<Player> player;
         static void Main(string[] args)
         {
-            Engine.Initialize("Game", 1280, 720);
-
-            /*player = new List<Player>
-            {
-                new Player();
-            }*/
-
+            Engine.Initialize("Game", width, height);
             Start();
 
-            while(true)
+            while (true)
             {
                 Update();
-                Render();
+                GameManager.Instance.Update();
+                GameManager.Instance.Render();
             }
         }
+
         private static void Start()
         {
-            Engine.Debug("Start");
-            
-            startTime = DateTime.Now;
+            GameManager.Instance.Start();
         }
+
         private static void Update()
         {
-            //foreach (Player c in player) c.Update;
-            player.Update();
-            DeltaTimeCalculation();
-            
+            GameManager.Instance.Update();
         }
-        private static void Render()
+
+        public static void Render()
         {
-            Engine.Clear();
-            Engine.Draw("Textures/Background/FondoEspacial.png");
-            //foreach (Player c in player) c.Render;
-            player.Render();
-            Engine.Show();
-        }
-        private static void DeltaTimeCalculation()
-        {
-            float currentFrame = (float)(DateTime.Now - startTime).TotalSeconds;
-            deltaTime = currentFrame - lastFrame;
-            lastFrame = currentFrame;
+            GameManager.Instance.Render();
         }
     }
 }

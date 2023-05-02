@@ -1,11 +1,60 @@
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Engine.dll
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.exe
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Game.pdb
-C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
-C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.exe
-C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.pdb
-C:\Users\juuli\Desktop\Base2\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTop.png
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTopLeft.png
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Player\NaveTopRight.png
-C:\Users\juuli\Desktop\Base2\Game\bin\Debug\Textures\Background\FondoEspacial.png
+D:\Download\Firefox\Proyecto Base 2\Game\bin\Debug\Engine.dll
+D:\Download\Firefox\Proyecto Base 2\Game\bin\Debug\ship.png
+D:\Download\Firefox\Proyecto Base 2\Game\bin\Debug\Game.exe
+D:\Download\Firefox\Proyecto Base 2\Game\bin\Debug\Game.pdb
+D:\Download\Firefox\Proyecto Base 2\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\Download\Firefox\Proyecto Base 2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Download\Firefox\Proyecto Base 2\Game\obj\Debug\Game.exe
+D:\Download\Firefox\Proyecto Base 2\Game\obj\Debug\Game.pdb
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\bin\Debug\Engine.dll
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\bin\Debug\Game.exe
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\bin\Debug\Game.pdb
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\obj\Debug\Game.exe
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\obj\Debug\Game.pdb
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\bin\Debug\Textures\BackgroundSpace.png
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos\Proyecto Base 2\Game\bin\Debug\Textures\ship.png
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\bin\Debug\Textures\BackgroundSpace.png
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\bin\Debug\Engine.dll
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\bin\Debug\Textures\ship.png
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\bin\Debug\Game.exe
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\bin\Debug\Game.pdb
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\obj\Debug\Game.exe
+D:\UADE\UADE - 2023-1 - Paradigmas\Proyectos por clase\Proyecto Base 2\Game\obj\Debug\Game.pdb
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Engine.dll
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Game.exe
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Game.pdb
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\obj\Debug\Game.exe
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\obj\Debug\Game.pdb
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Background\FondoEspacial.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\0NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\1NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\2NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\3NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\4NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\5NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\6NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Player\7NaveTop.png
+C:\Users\juuli\Downloads\Proyecto Base 2\Game\bin\Debug\Textures\Background\GameOverFondoEspacial.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Engine.dll
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Background\FondoEspacial.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Background\GameOverFondoEspacial.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\0NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\1NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\2NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\3NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\4NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\5NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\6NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Textures\Player\7NaveTop.png
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Game.exe
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\bin\Debug\Game.pdb
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\obj\Debug\Game.exe
+C:\Users\juuli\Downloads\TP-Principal\Proyecto Base 2\Game\obj\Debug\Game.pdb
