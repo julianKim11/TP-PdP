@@ -14,7 +14,7 @@ namespace Game
         private Animation _currentAnimation;
         private Character _player;
         private CheckCollision _checkCollision;
-        public LimitVertical(string texturePath, Vector2 position, Vector2 scale, float angle)
+        public LimitVertical(Vector2 position, Vector2 scale, float angle)
         {
             _player = LevelController.Player;
             _transform = new Transform(position, scale, angle);

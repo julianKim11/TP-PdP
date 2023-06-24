@@ -38,12 +38,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="AsteroidFactory.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CheckCollision.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameManager.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="Idamageable.cs" />
     <Compile Include="InputManager.cs" />
+    <Compile Include="LaserFactory.cs" />
     <Compile Include="LevelController.cs" />
     <Compile Include="LifeController.cs" />
     <Compile Include="Limit.cs" />
@@ -82,6 +87,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Background\WinScreenFondoEspacial.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Bullet\BulletLaser1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Bullet\BulletLaser2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Laser\Horizontal\VallaLaser0.png">

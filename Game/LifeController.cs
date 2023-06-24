@@ -11,6 +11,9 @@ namespace Game
         private int _maxHealth;
         private int currentLife;
 
+        //public delegate void GetDamageDelegate();
+
+        //public event GetDamageDelegate onGetDamage;
         public int CurrentLife
         {
             get => currentLife;
@@ -31,6 +34,7 @@ namespace Game
         public void GetDamage(int damage)
         {
             CurrentLife = currentLife - damage;
+            //onGetDamage.Invoke();
             Engine.Debug(currentLife);
         }
     }

@@ -6,40 +6,29 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class Character
+    public class Character : GameObject, IDamageable
     {
-        private Transform _transform;
-        private Renderer _renderer;
-        private Vector2 _direction;
         private Animation _playerIdle;
-        private Animation _currentAnimation;
         private LifeController _lifeController;
         private InputManager _inputManager;
         private SpeedController _speedController;
-
-        private float movementSpeed;
+        private float _movementSpeed;
         public bool isAlive = true;
         public LifeController LifeController => _lifeController;
-        public Transform Transform => _transform;
-        public Renderer Renderer => _renderer;
-        public Vector2 Direction { get => _direction; set => _direction = value; }
-        public float MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
+        public float MovementSpeed { get => _movementSpeed; set => _movementSpeed = value; }
         
-        public Character(string texturePath, Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction, int life)
+        public Character(Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction, int life) : base(position,scale,angle)
         {
             _transform = new Transform(position, scale, angle);
             _lifeController = new LifeController(life);
 
-            CreateAnimation();
-            _currentAnimation = _playerIdle;
-
-            movementSpeed = movementSpeed;
+            _movementSpeed = movementSpeed;
             _direction = direction;
             _inputManager = new InputManager(this);
             _speedController = new SpeedController(this);
-            _renderer = new Renderer(_currentAnimation, scale);
+           
         }
-        public void CreateAnimation()
+        protected override void CreateAnimation()
         {
             List<Texture> idleTextures1 = new List<Texture>();
 
@@ -49,17 +38,17 @@ namespace Game
                 idleTextures1.Add(frame);
             }
             _playerIdle = new Animation(true, "IdleTop", 0.1f, idleTextures1);
+            currentAnimation = _playerIdle;
         }
         public void Update()
         {
             _speedController.IncreaseSpeed();
             _inputManager.InputReading();
-            _currentAnimation.Update();
+            currentAnimation.Update();
             if (GameManager.Instance.running == true)
             {
-                _transform.Translate(_direction, movementSpeed);
+                _transform.Translate(_direction, _movementSpeed);
             }
         }
-        public void Render() => _renderer.Render(_transform);
     }
 }

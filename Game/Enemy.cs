@@ -6,32 +6,25 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    class Enemy
+    public class Enemy : GameObject
     {
-        private Transform _transform;
-        private Renderer _renderer;
-        private Vector2 _direction;
         private Animation asteroid;
-        private Animation currentAnimation;
         private Character _player;
         private CheckCollision _checkCollision;
 
         private float _movementSpeed;
 
-        public Enemy(string texturePath, Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction)
+        public Enemy(Vector2 position, Vector2 scale, float angle, float movementSpeed, Vector2 direction) : base(position, scale, angle)
         {
             _player = LevelController.Player;
-            _transform = new Transform(position, scale, angle);
 
             _movementSpeed = movementSpeed;
             _direction = direction;
 
-            CreateAnimation1();
-            currentAnimation = asteroid;
-            _renderer = new Renderer(currentAnimation, scale);
             _checkCollision = new CheckCollision();
+            
         }
-        public void CreateAnimation1()
+        protected override void CreateAnimation()
         {
             List<Texture> idleTextures1 = new List<Texture>();
 
@@ -41,6 +34,7 @@ namespace Game
                 idleTextures1.Add(frame);
             }
             asteroid = new Animation(true, "asteroid", 0.15f, idleTextures1);
+            currentAnimation = asteroid;
         }
         public void Update()
         {
@@ -48,6 +42,5 @@ namespace Game
             currentAnimation.Update();
             _transform.Translate(_direction, _movementSpeed);
         }
-        public void Render() => _renderer.Render(_transform);
     }
 }
